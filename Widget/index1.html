@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погодный Виджет</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .weather-widget {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        .weather-info {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .loading-spinner {
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-widget">
+        <h4 class="text-center">Погодный виджет</h4>
+        <input 
+            type="text" 
+            id="cityInput" 
+            class="form-control mb-3" 
+            placeholder="Введите название города" 
+            autocomplete="off">
+        <div id="loadingSpinner" class="spinner-border text-primary d-none" role="status"></div>
+        <div id="errorAlert" class="alert alert-danger d-none"></div>
+        <div id="weatherInfo" class="weather-info"></div>
+    </div>
+
+    <script src="Widget.js"></script>
+</body>
+</html>
